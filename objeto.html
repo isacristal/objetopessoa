@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            nome: "Geraldo",
+            idade: 18,
+            profissao: "coveiro",
+            apresentando () {
+                return "Olá, meu nome é " + this.nome + " eu tenho " + this.idade + " anos, e sou um " + this.profissao
+            },
+            outra: {
+                rua: "Rua 9 3/4",
+                cidade: "Santópolis",
+                estado: "Bahia",
+                endereco () {
+                    return "Moro na " + this.rua + ", na cidade de " + this.cidade + " - " + this.estado
+                }
+            }
+
+        }
+
+        delete obj.profissao
+
+        console.log(obj.apresentando())
+        console.log(obj.outra.endereco())
+
+
+    </script>
+    
+</body>
+</html>
